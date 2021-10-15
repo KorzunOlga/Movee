@@ -1,8 +1,16 @@
 @import "./null-style.css";
+:root {
+  --main-font-color: #333333;
+  --main-background-color:#FED100;
+  --button-color:#FF352B;
+  --button-color2:#FF772B;
+  --button-color3: #F2F2F2;
+  --white: #FFFFFF;
+}
 
 body {
   font-family: "Montserrat";
-  color: #333333;
+  color: var(--main-font-color);
 }
 .wrapper {
   display: flex;
@@ -10,155 +18,194 @@ body {
   }
 .content {
   flex:1 1 auto;
+  
   }
-.block1 {
-  background-color:#FED100;
+.banner {
+  background-color:var(--main-background-color);
   }
 .container {
     max-width: 1312px;
     margin: 0 auto;
+    padding: 2.5rem 2rem 0;
   }
-
 .header {
   display: flex;
-  padding: 40px 32px;
   justify-content: space-between;
   }
 .header__logo {
   font-weight: 600;
-  font-size: calc(16px + 14 * ((100vw - 320px)/ (1312 - 320)));
+  font-size: 1.88rem;
 }
 .header__menu {
   display: flex;
-  gap:16px;
+  gap: 2rem;
   font-weight: 500;
-  font-size: 18px;
-    }
+  font-size: 1.13rem;
+}
 .menu__list {
-  color: #333333;
-  }
+  color: var(--main-font-color);
+}
+.menu__list:hover{
+  color: var(--button-color);
+  font-weight: 700;
+}
 .header__phone {
   white-space: nowrap;
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid var(--main-font-color);
   font-weight: 600;
-  font-size: 24px;
+  font-size: 1.5rem;
   }
 .header__phone a {
-  color: #333333;
+  color: var(--main-font-color);
 }
 .header__burger {
-  height: 19px;
-  width: 44px;
+  height: 1.19rem;
+  width: 2.75rem;
   display: none;
   }
 .burger {
-  height: 2px;
-  width: 44px;
-  background-color: #333333;
-  margin: 6px 0;  
+  height: 0.13rem;
+  width: 2.75rem;
+  background-color: var(--main-font-color);
+  margin: 0.38rem 0;  
 }
-.block1__body {
+.banner-body {
   display: flex;
-  padding: 0 32px;
-  }
+  margin: o auto;
+    }
+
 .main-title{
   font-weight: 700;
   line-height: 126.9%;
-  font-size: calc(28px + 42 * ((100vw - 320px)/ (1312 - 320)));
+  font-size: 4.38rem;
+  margin: 3.75rem 0 0.5rem;
+  
   }
 .subtitle {
   font-weight: 600;
-  font-size: calc(18px + 12 * ((100vw - 320px)/ (1312 - 320)));
+  font-size: 1.88rem;
 }
+
 .hidden-image, .hidden-logo {
   display: none;
   }
 .button {
-  width: 200px;
-  height: 60px;
-  background-color:#FF352B;
-  margin: 100px 0 40px;
+  cursor: pointer;
+  width: 12.5rem;
+  height: 3.75rem;
+  background-color: var(--button-color);
+  margin: 4rem 0 4rem;
   text-align: center;
-  padding: 18px 0 0 0 ;
+  padding: 1.13rem 0 0 0 ;
   font-weight: 600;
-  font-size: 24px;
-  box-shadow: 8px 8px 0 #FED100, 10px 10px 0 #f2f2f2, 10px 6px 0 #f2f2f2, 6px 10px 0 #f2f2f2;
+  font-size: 1.5rem;
+  box-shadow: 0.5rem 0.5rem 0 var(--main-background-color), 0.63rem 0.63rem 0 var(--button-color3), 0.63rem 0.38rem 0 var(--button-color3), 0.38rem 0.63rem 0 var(--button-color3);
   transition: 0.5s;
   }
 .button a {
-    color: #F2F2F2;
+    color: var(--button-color3);
     }
+.button:hover {
+  background-color: var(--button-color2);
+  box-shadow: 0.63rem 0.63rem 0 var(--button-color3), 0.63rem 0.38rem 0 var(--button-color3), 0.38rem 0.63rem 0 var(--button-color3);
+  }
+  .button:hover a{
+    color: var(--white);
+  }
 .items {
   display: flex;
   justify-content: space-around;
   vertical-align: middle;
-  font-size: 16px;
-  height: 42px;
-  padding: 0 32px 0 0;
+  font-size: 1rem;
+  height: 2.63rem;
+  padding: 0 2rem 0 0;
   }
-.item1 {
-  background: url('../img/icons/truck.svg') left / 51.92px 39px no-repeat;
-    padding-left: 64px;
+  .items {
+    display: flex;
   }
-.item2 {
-  background: url('../img/icons/triggerTwo.svg') left / 40px 37.78px no-repeat; 
-    padding-left: 52px;
+  .item {
+    display: flex;
+    align-items: center;
   }
-.item3 {
-  background: url('../img/icons/money.svg') left / 41px 40.52px no-repeat;
-  padding-left: 53px;
-}
-.item1, .item2, .item3 {
-  max-width: 176px;
-    }
-.block1__image{
-  margin: 21px 0 0 0;
+  .item-image {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+  }
+  .item-image img {
+    width: 100%;
+    height: 100%;
+  }
+  .item-text {
+    max-width: 10rem;
+    margin: 0 0 0 1rem;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.32;
+  }
+.banner-body__image{
+  flex: 0 1 auto;
+  margin: -3.5rem auto 0;
   max-width: 553px;
   max-height: 629px;
-  min-width: 248px;
-  min-height: 396px;
-}
-.block1__image img{
+  }
+.banner-body__image img{
   width: 100%;
   height: 100%;
   }
 @media (max-width: 992px){
-  .block1__body {
-    flex-direction:column;
-    align-items: center;
-    }
+  .banner-body__image, .items {
+    display:none;
+  }
+  .main-title, .subtitle { 
+    text-align: center;
+  }
+  .main-title{
+    font-size: 3.5rem;
+  }
+  .subtitle {
+    font-size: 1.7rem;
+  }
+  .banner-body {
+    flex-direction: column;
+    padding-bottom: 2.75rem;
+  }
+   
   .hidden-image{
-    display:flex;
-    flex: 1 1 auto;
-    position:relative;
-    z-index: 0;
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin: -2rem auto 2rem;
+    padding: 0 1rem;
+    max-height: 396px;
+    max-width: 248px;
   }
   .hidden-image img {
     height: 100%;
     width: 100%;
   }
   .hidden-logo {
-    display: flex;
+    display: block;
     position: relative;
-    z-index: 3;
-    font-size: 20px;
+    z-index: 2;
+    margin: -7.2rem auto 2rem;
+    font-size: 1.25rem;
     font-weight: 500;
-    margin: -50px 0;
+    max-height: 27px;
+    max-width: 86.63px;
   }
-  .block1__image, .items {
-    display:none;
-  }
-  .main-title, .subtitle { 
-    text-align: center;
+  .hidden-logo img {
+    height: 100%;
+    width: 100%;
   }
   .button {
-    margin: 0 0 50px 0;
     box-shadow: none;
-    width: 292px;
-    height: 60px;
-    font-size: 20px;
+    width: 18.25rem;
+    height: 3.75rem;
+    font-size: 1.25rem;
     position: relative;
-    z-index: 1;
+    z-index: 3;
+    margin: 0 auto;
   }
 }
 @media (max-width: 767px) {
@@ -167,6 +214,28 @@ body {
   }  
   .header__burger {
     display: block;
+  }
+  .header__logo {
+    font-size: 1.5rem;
+  }
+  .main-title{
+    font-size: 2.6rem;
+  }
+  .subtitle {
+    font-size: 1.38rem;
+  }
+}
+@media (max-width: 320px){
+  .header__logo {
+    font-size: 1rem;
+  }
+  .main-title{
+    margin: 0.5rem auto;
+    font-size: 1.75rem;
+    
+  }
+  .subtitle {
+    font-size: 1.13rem;
   }
 }
   
