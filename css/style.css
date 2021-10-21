@@ -1,0 +1,342 @@
+@import "./null-style.css";
+:root {
+  --main-font-color: #333333;
+  --main-background-color:#FED100;
+  --button-color:#FF352B;
+  --button-color2:#FF772B;
+  --button-color3: #F2F2F2;
+  --white: #FFFFFF;
+}
+
+body {
+  font-family: "Montserrat";
+  color: var(--main-font-color);
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex:1 1 auto;
+}
+.banner {
+  background-color:var(--main-background-color);
+  }
+.container {
+  max-width: 1312px;
+  margin: 0 auto;
+  }
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem 2rem 0;
+  }
+.header__logo {
+  font-weight: 600;
+  font-size: 1.88rem;
+}
+.header__menu {
+  display: flex;
+  gap: 2rem;
+  font-weight: 500;
+  font-size: 1.13rem;
+  z-index: 2;
+}
+.menu__list {
+  color: var(--main-font-color);
+}
+.menu__list:hover{
+  color: var(--button-color);
+  font-weight: 700;
+}
+.header__phone {
+  white-space: nowrap;
+  border-bottom: 1px solid var(--main-font-color);
+  font-weight: 600;
+  font-size: 1.5rem;
+  z-index: 2;
+}
+.header__phone a {
+  color: var(--main-font-color);
+}
+.header__phone:hover{
+  font-weight: 700;
+  border-bottom-color: var(--button-color);
+}
+.header__phone:hover a {
+  color: var(--button-color);
+}
+.header__burger {
+  height: 1.19rem;
+  width: 2.75rem;
+  display: none;
+  }
+.burger {
+  height: 0.13rem;
+  width: 2.75rem;
+  background-color: var(--main-font-color);
+  margin: 0.38rem 0;  
+}
+.banner-body {
+  display: flex;
+  margin: o auto;
+  padding: 0 2rem;
+    }
+
+.main-title{
+  font-weight: 700;
+  line-height: 126.9%;
+  font-size: 4.38rem;
+  margin: 3.75rem 0 0.5rem;
+  
+  }
+.subtitle {
+  font-weight: 600;
+  font-size: 1.88rem;
+}
+
+.hidden-image, .hidden-logo {
+  display: none;
+  }
+.main-button {
+  cursor: pointer;
+  width: 12.5rem;
+  height: 3.75rem;
+  background-color: var(--button-color);
+  margin: 4rem 0 4rem;
+  text-align: center;
+  padding: 1.13rem 0 0 0 ;
+  font-weight: 600;
+  font-size: 1.5rem;
+  box-shadow: 0.5rem 0.5rem 0 var(--main-background-color), 0.63rem 0.63rem 0 var(--button-color3), 0.63rem 0.38rem 0 var(--button-color3), 0.38rem 0.63rem 0 var(--button-color3);
+  transition: 0.5s;
+  }
+.main-button a {
+    color: var(--button-color3);
+    }
+.main-button:hover {
+  background-color: var(--button-color2);
+  box-shadow: 0.63rem 0.63rem 0 var(--button-color3), 0.63rem 0.38rem 0 var(--button-color3), 0.38rem 0.63rem 0 var(--button-color3);
+  }
+  .main-button:hover a{
+    color: var(--white);
+  }
+.items {
+  display: flex;
+  justify-content: space-around;
+  vertical-align: middle;
+  font-size: 1rem;
+  height: 2.63rem;
+  padding: 0 2rem 0 0;
+  }
+  .items {
+    display: flex;
+  }
+  .item {
+    display: flex;
+    align-items: center;
+  }
+  .item-image {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+
+  }
+  .item-image img {
+    width: 100%;
+    height: 100%;
+  }
+  .item-text {
+    max-width: 10rem;
+    margin: 0 0 0 1rem;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.32;
+  }
+.banner-body__image{
+  z-index: 1;
+  flex: 0 1 auto;
+  margin: -3.5rem auto 0rem;
+  max-width: 553px;
+  max-height: 629px;
+  }
+.banner-body__image img{
+  width: 100%;
+  height: 100%;
+  }
+
+/*-----------------------------------CT-3: 2ndblock HOW----------- */
+.how {
+  background-color: var(--white);
+  padding: 2rem 0 1.7rem;
+}
+.section__title {
+  text-align: center;
+  margin: 4rem 0;
+  height: 2.32rem;
+  font-size: 1.88rem;
+}
+.section__title h3 {
+  font-weight: 600;
+}
+.section__columns {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.section__column {
+  flex: 0 1 50%;
+  padding: 0 2.75rem;
+  margin: 0 0 4.8rem;
+}
+.column__row {
+  display: flex;
+}
+.column__icon {
+  flex:0 0 4.13rem;
+  height: 3.81rem;
+}
+.column__icon img {
+  height: 100%;
+}
+.column__body {
+  padding: 0 0 0 2.63rem;
+	flex: 1 1 auto;
+}
+.column__body h5 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  padding: 0 0 1rem;
+}
+.column__body p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.32rem;
+}
+
+
+/*-----------------------------------CT-3: 3ndblock PRICES----------- */
+.prices {
+}
+.section__columns {
+}
+.section__column {
+}
+.button {
+}
+.mobile__menu{
+  
+}
+/*----------------------------------media----------------------------------*/
+@media (max-width: 992px){
+  .banner-body__image, .items, .column__body p {
+    display:none;
+  }
+  .main-title, .subtitle { 
+    text-align: center;
+  }
+  .main-title{
+    font-size: 3.5rem;
+  }
+  .subtitle {
+    font-size: 1.7rem;
+  }
+  .banner-body {
+    flex-direction: column;
+    padding-bottom: 2.75rem;
+  }
+  .hidden-image{
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin: -2rem auto 2rem;
+    padding: 0 1rem;
+    max-height: 396px;
+    max-width: 248px;
+  }
+  .hidden-image img {
+    height: 100%;
+    width: 100%;
+  }
+  .hidden-logo {
+    display: block;
+    position: relative;
+    z-index: 2;
+    margin: -7.2rem auto 2rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    max-height: 27px;
+    max-width: 86.63px;
+  }
+  .hidden-logo img {
+    height: 100%;
+    width: 100%;
+  }
+  .main-button {
+    box-shadow: none;
+    width: 18.25rem;
+    height: 3.75rem;
+    font-size: 1.25rem;
+    position: relative;
+    z-index: 3;
+    margin: 0 auto;
+  }
+  .column__body h5 {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .header__menu, .header__phone {
+    display: none;
+  }  
+  .header__burger {
+    display: block;
+  }
+  .header__logo {
+    font-size: 1.5rem;
+  }
+  .main-title{
+    font-size: 2.6rem;
+  }
+  .subtitle {
+    font-size: 1.38rem;
+  }
+  .section__title {
+    margin: 0.6rem 0 3rem 0;
+  }
+  .section__columns {
+    justify-content: center;
+  }
+  .section__column {
+    flex: 1 1 auto;
+    margin: 0 0 1.5rem;
+  }
+  .column__row {
+    align-items: center;
+  }
+  .column__body h5 {
+    font-weight: 400;
+  }
+}
+@media (max-width: 320px){
+  .header__logo {
+    font-size: 1rem;
+  }
+  .main-title{
+    margin: 0.5rem auto;
+    font-size: 1.75rem;
+  }
+  .subtitle {
+    font-size: 1.13rem;
+  }
+  .section__title {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+  .column__body h5 {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+}
+  
